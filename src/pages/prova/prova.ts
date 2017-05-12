@@ -38,11 +38,11 @@ export class Prova {
   }
 
   list_respostas(){
-    this.httpService.builder('respostas')
+    this.httpService.builder('alternativas')
       .list()
       .then((res) => {
         this.alternativas = res;
-        console.log('pergunta');
+        console.log(this.alternativas);
         
     });
   }
@@ -53,7 +53,7 @@ export class Prova {
     if(resposta.status){
       let alert = this.alertCtrl.create({
         title:'CORRETO! :)',
-        subTitle:'Respota correta! em breve novas perguntas estão disponiveis :)',
+        subTitle: resposta+' Respota correta! em breve novas perguntas estão disponiveis :)',
         buttons: ['Sair']
       })
       alert.present().then((res)=>{
@@ -73,8 +73,8 @@ export class Prova {
   }
 
   salvar(res){
-    this.httpService.builder('alternativas')
-      .insert({resposta_id: res.id, status: res.status})
+    this.httpService.builder('respostas')
+      .insert({alternativa_id: res.id, status: res.status})
       .then((res) => {
         console.log('res');
     });

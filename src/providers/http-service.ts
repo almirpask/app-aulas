@@ -17,7 +17,8 @@ export class HttpService {
   }
 
   builder(resource:string){
-    this.url = 'http://localhost:8000/api/'+ resource;
+    
+    this.url = 'https://appaulas.herokuapp.com/api/'+ resource;
     
     return this
   }
