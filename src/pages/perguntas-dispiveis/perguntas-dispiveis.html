@@ -5,18 +5,24 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Questionarios</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
-  
-
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let q  of questionarios" (click)="openQuestionario()">
+      <ion-col width-50>
+        <h2>Disciplina:{{q.disciplina_nome}}</h2>
+        <p> Perguntas: 1 Educador: {{q.educador}}</p> 
+      </ion-col>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+

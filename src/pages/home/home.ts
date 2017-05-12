@@ -1,18 +1,38 @@
+import { HttpService } from './../../providers/http-service';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  providers: [HttpService]
 })
 export class HomePage {
-  testes: string;
-  constructor(public navCtrl: NavController) {
+  relatorio:any;
+  questionarios:any;
+  acertos:any;
+  erros:any;
+  respostas:any;
+
+  constructor(public navCtrl: NavController, public httpService: HttpService) {
 
   }
 
-  teste(){
-     this.testes = "vc clicou no botao teste";
+  ngOnInit(){
+    this.getRelatorio();
+
+  }
+
+  getRelatorio(){
+    this.httpService.builder('relatorios')
+      .list()
+      .then((res) => {
+        this.relatorio = res;
+        this.questionarios = this.relatorio.questionarios;
+        this.acertos = this.relatorio.acertos;
+        this.erros = this.relatorio.erros;
+        this.respostas = this.relatorio.respostas;
+    });
   }
   
 

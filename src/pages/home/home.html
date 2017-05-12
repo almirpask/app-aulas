@@ -9,6 +9,54 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-grid>
 
+    <ion-row >
+      <ion-col width-50>
+        <ion-card>
+          <ion-card-header>
+            <p>Acertos:</p>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Total: {{acertos}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-50>
+        <ion-card>
+          <ion-card-header>
+            <p>Erros:</p>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Total: {{erros}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-50>
+        <ion-card>
+          <ion-card-header>
+            <p>Questionarios:</p>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Disponiveis: {{questionarios}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-50>
+        <ion-card>
+          <ion-card-header>
+            <p>Respostas:</p>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Realizadas: {{respostas}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      
+    </ion-row>
+  
+
+  </ion-grid>
 </ion-content>
+

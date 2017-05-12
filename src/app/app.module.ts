@@ -1,3 +1,4 @@
+import { Prova } from './../pages/prova/prova';
 import { Http, HttpModule } from '@angular/http';
 import { PerguntasDispiveis } from './../pages/perguntas-dispiveis/perguntas-dispiveis';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,7 +14,8 @@ import { HomePage } from '../pages/home/home';
   declarations: [
     MyApp,
     HomePage,
-    PerguntasDispiveis
+    PerguntasDispiveis,
+    Prova
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { HomePage } from '../pages/home/home';
   entryComponents: [
     MyApp,
     HomePage,
-    PerguntasDispiveis
+    PerguntasDispiveis,
+    Prova
   ],
   providers: [
     StatusBar,
