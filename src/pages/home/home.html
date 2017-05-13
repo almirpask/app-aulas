@@ -32,7 +32,9 @@
             <p>Total: {{erros}}</p>
           </ion-card-content>
         </ion-card>
-      </ion-col>
+      </ion-col> 
+    </ion-row>
+    <ion-row >
       <ion-col width-50>
         <ion-card>
           <ion-card-header>
@@ -53,7 +55,26 @@
           </ion-card-content>
         </ion-card>
       </ion-col>
-      
+    </ion-row>
+
+    <ion-row >
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <p>Percentual de acertos:</p>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-col>
+                <div class="row" [ngStyle]="{'width': 100 + '%'}">
+                  <div class="certo" [ngStyle]="{'width': porcentagem_acertos + '%'}"><p class="center">{{porcentagem_acertos}}% de acertos</p></div>
+                  <div class="errado"  [ngStyle]="{'width': porcentagem_erros + '%'}"><p class="center">{{porcentagem_erros}}% de erros</p></div>
+                </div> 
+              
+              
+            </ion-col>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
     </ion-row>
   
 

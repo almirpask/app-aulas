@@ -1,3 +1,23 @@
 page-home {
+    
+}
 
+.certo{
+    background-color: rgba(54, 162, 235, 0.2);
+    border-color: #36A2EB;
+    border-style: solid;
+    border-right: none;
+    height: 30px;
+}
+.errado{
+    background-color: rgba(255, 99, 132, 0.2);
+    border-color: #FF6384;
+    border-style: solid;
+    border-left: none;
+    height: 30px;
+    
+}
+
+.center {
+    text-align: center;
 }

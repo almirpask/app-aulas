@@ -1,7 +1,6 @@
 import { HttpService } from './../../providers/http-service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-
 /**
  * Generated class for the Prova page.
  *
@@ -53,7 +52,7 @@ export class Prova {
     if(resposta.status){
       let alert = this.alertCtrl.create({
         title:'CORRETO! :)',
-        subTitle: resposta+' Respota correta! em breve novas perguntas estão disponiveis :)',
+        subTitle: 'Respota correta! Em breve novas perguntas estarão disponiveis.',
         buttons: ['Sair']
       })
       alert.present().then((res)=>{
@@ -62,7 +61,7 @@ export class Prova {
     }else{
       let alert = this.alertCtrl.create({
           title:'ERRADO! :/',
-          subTitle:'Que pena, não foi dessa vez :/ Mas não desanime !<br>Fique atento a novas perguntas para se tornar cada vez melhor !',
+          subTitle:'Que pena, não foi dessa vez. <br>Mas não desanime!<br>Fique atento a novas perguntas para se tornar cada vez melhor!',
           buttons: ['Sair']
       });
       alert.present().then((res)=>{
@@ -79,6 +78,9 @@ export class Prova {
         console.log('res');
     });
   }
+
+  
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad Prova');
   }
